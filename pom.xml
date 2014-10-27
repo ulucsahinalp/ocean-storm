@@ -36,4 +36,23 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <scm>
+      <connection>scm:git:git@github.com:ulucsahinalp/ocean-storm.git</connection>
+      <url>scm:git:git@github.com:ulucsahinalp/ocean-storm.git</url>
+      <developerConnection>scm:git:git@github.com:ulucsahinalp/ocean-storm.git</developerConnection>
+  </scm>
+  <build>
+    <plugins>
+      <!--
+        Bind the maven-assembly-plugin to the package phase
+        this will create a jar file without the storm dependencies
+        suitable for deployment to a cluster.
+       -->
+        <plugin>
+	      <groupId>org.apache.maven.plugins</groupId>
+	      <artifactId>maven-release-plugin</artifactId>
+	      <version>3.1.1</version>
+	</plugin>
+    </plugins>
+  </build>
 </project>

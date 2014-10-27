@@ -25,8 +25,9 @@
     <dependency>
       <groupId>storm</groupId>
       <artifactId>storm</artifactId>
-      <version>0.8.2</version>
-      <scope>compile</scope>
+      <version>0.9.0.1</version>
+      <!-- keep storm out of the jar-with-dependencies -->
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -35,4 +36,14 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <scm>
+      <connection>scm:git:git@github.com:ulucsahinalp/ocean-storm.git</connection>
+      <url>scm:git:git@github.com:ulucsahinalp/ocean-storm.git</url>
+      <developerConnection>scm:git:git@github.com:ulucsahinalp/ocean-storm.git</developerConnection>
+  </scm>
+  <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-release-plugin</artifactId>
+      <version>3.1.1</version>
+  </plugin>
 </project>
